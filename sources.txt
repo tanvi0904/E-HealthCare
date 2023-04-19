@@ -1,9 +1,9 @@
-D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\Admin\Admin.java
-D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\Admin\AdminController.java
-D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\Admin\AdminDao.java
 D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\AdminFeed\AdminFeed.java
 D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\AdminFeed\AdminFeedController.java
 D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\AdminFeed\AdminFeedDao.java
+D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\AdminPay\AdminPay.java
+D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\AdminPay\AdminPayController.java
+D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\AdminPay\AdminPayDao.java
 D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\Appo\Appo.java
 D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\Appo\AppoController.java
 D:\Tanvi\PES\Sem6\2_352_OOAD\Project\E-HealthCare\Appo\AppoDao.java

@@ -19,9 +19,14 @@
             }
         }
     </script>
+    <style>
+        body{
+            background-color: #aff0fa;
+        }
+    </style>
 </head>
 <body>
-    <h1>Pls Enter Feedback</h1>
+    <h1>Please Enter Feedback</h1>
     <form action="userf" method="post">
         <h2>Add Feedback Details</h2>
         <input type="text" name="id" placeholder="UserID">

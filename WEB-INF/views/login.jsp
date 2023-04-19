@@ -19,6 +19,11 @@
             }
         }
     </script>
+    <style>
+        body{
+            background-color: #aff0fa;
+        }
+    </style>
 </head>
 <body>
     <h1>Login</h1>

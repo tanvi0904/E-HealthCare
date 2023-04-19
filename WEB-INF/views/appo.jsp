@@ -19,6 +19,11 @@
             }
         }
     </script>
+    <style>
+        body{
+            background-color: #aff0fa;
+        }
+    </style>
 </head>
 <!-- table has only pid and did date_time and report -->
 <body>

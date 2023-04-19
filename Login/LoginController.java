@@ -41,7 +41,13 @@ public class LoginController extends HttpServlet {
         try {
             Login login = new Login(username, password, role);
             loginDao.Signup(login);
-            response.sendRedirect("/myapp/login");
+            if (role.equals("doctor")) {
+                response.sendRedirect("http://localhost:5555/doctor.html");
+            } else if (role.equals("admin")) {
+                response.sendRedirect("http://localhost:5555/admin.html");
+            } else if (role.equals("patient")) {
+                response.sendRedirect("http://localhost:5555/patient.html");
+            }
         } catch (SQLException e) {
             throw new ServletException("Unable to add user", e);
         }
