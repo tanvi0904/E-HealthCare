@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Dashboard</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			background-color: #f2b3a5;
+		}
+
+		h1 {
+			font-size: 36px;
+			margin: 50px 0;
+		}
+
+		button {
+			background-color: #4CAF50;
+			color: white;
+			padding: 14px 20px;
+			margin: 8px 0;
+			border: none;
+			cursor: pointer;
+			width: 200px;
+			font-size: 18px;
+			border-radius: 4px;
+		}
+
+		button:hover {
+			background-color: #3e8e41;
+		}
+
+		.functions {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			margin-top: 30px;
+			flex-wrap: wrap;
+			max-width: 600px;
+			width: 100%;
+		}
+
+		.function {
+			border-radius: 10px;
+			box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+			margin: 20px;
+			padding: 20px;
+			width: 300px;
+			flex-basis: 33.33%;
+			box-sizing: border-box;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		.function h2 {
+			font-size: 24px;
+			margin-bottom: 10px;
+		}
+
+		.function p {
+			font-size: 18px;
+			margin-bottom: 20px;
+		}
+
+		#blue {
+			background-color: #7cd6fc;
+			color: black;
+		}
+
+		#green {
+			background-color: #40f59a;
+			color: black;
+		}
+
+		#pink {
+			background-color: #ed9ef0;
+			color: black;
+		}
+		
+		#purple {
+			background-color: #b65ced;
+			color: black;
+		}
+		
+		#yellow {
+			background-color: #ffe75e;
+			color: black;
+		}
+		
+		#orange {
+			background-color: #ffad5e;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<h1>Admin Dashboard</h1>
+		<div class="functions">
+			<div class="function" id="blue">
+				<h2>View Rooms</h2>
+				<p>View all available rooms and their details.</p>
+				<button onclick="location.href='#';">View Rooms</button>
+			</div>
+			<div class="function" id="green">
+				<h2>View Appointments</h2>
+				<p>View all appointments and their details.</p>
+				<button onclick="location.href='#';">View Appointments</button>
+			</div>
+			<div class="function" id="pink">
+				<h2>Verify Payments</h2>
+				<p>Verify the payment details of patients.</p>
+				<button onclick="location.href='#';">Verify Payments</button>
+            </div>
+            <div class="function" id="blue">
+                <h2>Add/Remove Doctors</h2>
+                <p>Add or remove doctors from the hospital staff.</p>
+                <button onclick="location.href='#';">Manage Doctors</button>
+            </div>
+            <div class="function" id="green">
+                <h2>View Reports</h2>
+                <p>View the health reports of all patients.</p>
+                <button onclick="location.href='#';">View Reports</button>
+            </div>
+            <div class="function" id="pink">
+                <h2>View Feedback</h2>
+                <p>View feedback and ratings from patients.</p>
+                <button onclick="location.href='#';">View Feedback</button>
+            </div>
+        </div>
+    </div>
+</body> 
+</html>
