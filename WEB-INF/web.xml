@@ -53,4 +53,12 @@
     <servlet-name>RoomController</servlet-name>
     <url-pattern>/room</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>AppoController</servlet-name>
+    <servlet-class>AppoController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AppoController</servlet-name>
+    <url-pattern>/appo</url-pattern>
+  </servlet-mapping>
 </web-app>
