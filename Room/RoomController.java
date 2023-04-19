@@ -36,10 +36,10 @@ public class RoomController extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         int RID = Integer.parseInt(request.getParameter("RID"));
-        int DID = Integer.parseInt(request.getParameter("DID"));
+        int PID = Integer.parseInt(request.getParameter("PID"));
         int NOB = Integer.parseInt(request.getParameter("NOB"));
         try {
-            Room room = new Room(RID, DID, NOB);
+            Room room = new Room(RID, PID, NOB);
             roomDao.Signup(room);
             response.sendRedirect("/myapp/room");
         } catch (SQLException e) {
