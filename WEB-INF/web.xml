@@ -61,4 +61,20 @@
     <servlet-name>AppoController</servlet-name>
     <url-pattern>/appo</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>ReportController</servlet-name>
+    <servlet-class>ReportController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ReportController</servlet-name>
+    <url-pattern>/report</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminFeedController</servlet-name>
+    <servlet-class>AdminFeedController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminFeedController</servlet-name>
+    <url-pattern>/adminf</url-pattern>
+  </servlet-mapping>
 </web-app>

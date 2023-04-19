@@ -6,10 +6,10 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
-public class AppoDao {
+public class ReportDao {
     private Connection connection;
 
-    public AppoDao() throws SQLException {
+    public ReportDao() throws SQLException {
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
         } catch (ClassNotFoundException e) {
@@ -22,18 +22,18 @@ public class AppoDao {
         connection = DriverManager.getConnection(url, username, password);
     }
 
-    public void addAppo(Report appo) throws SQLException {
-        String sql = "INSERT INTO appointment (pid, did, date_time,report) VALUES (?, ?, ?, ?)";
+    public void addReport(Report report) throws SQLException {
+        String sql = "UPDATE appointment SET report = ? WHERE pid = ? AND did = ? AND date_time = ?";
         PreparedStatement statement = connection.prepareStatement(sql);
-        statement.setString(1, appo.getPid());
-        statement.setString(2, appo.getDid());
-        statement.setString(3, appo.getDate_time());
-        statement.setString(4, "Not yet");
+        statement.setString(1, report.getReport());
+        statement.setString(2, report.getPid());
+        statement.setString(3, report.getDid());
+        statement.setString(4, report.getDate_time());
         statement.executeUpdate();
     }
 
-    public List<Report> getAllAppos() throws SQLException {
-        List<Report> appos = new ArrayList<>();
+    public List<Report> getAllReports() throws SQLException {
+        List<Report> reports = new ArrayList<>();
         String sql = "SELECT * FROM appointment";
         PreparedStatement statement = connection.prepareStatement(sql);
         ResultSet resultSet = statement.executeQuery();
@@ -41,11 +41,11 @@ public class AppoDao {
             String pid = resultSet.getString("pid");
             String did = resultSet.getString("did");
             String date_time = resultSet.getString("date_time");
-            String report = resultSet.getString("report");
-            Report appo = new Report(pid, did, date_time, report);
-            appos.add(appo);
+            String report1 = resultSet.getString("report");
+            Report report = new Report(pid, did, date_time, report1);
+            reports.add(report);
         }
-        System.out.println(appos);
-        return appos;
+        System.out.println(reports);
+        return reports;
     }
 }

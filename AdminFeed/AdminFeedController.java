@@ -9,13 +9,13 @@ import javax.servlet.http.HttpServletResponse;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.annotation.WebServlet;
 
-@WebServlet("/appo")
-public class AppoController extends HttpServlet {
-    private AppoDao appoDao;
+@WebServlet("/adminf")
+public class AdminFeedController extends HttpServlet {
+    private AdminFeedDao adminFeedDao;
 
     public void init() throws ServletException {
         try {
-            appoDao = new AppoDao();
+            adminFeedDao = new AdminFeedDao();
         } catch (SQLException e) {
             throw new ServletException("Unable to connect to database", e);
         }
@@ -24,25 +24,24 @@ public class AppoController extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            List<Report> appos = appoDao.getAllAppos();
-            request.setAttribute("appos", appos);
-            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/appo.jsp");
+            List<AdminFeed> adminFeeds = adminFeedDao.getAdminFeeds();
+            request.setAttribute("adminFeeds", adminFeeds);
+            // request.getRequestDispatcher("users.jsp").forward(request, response);
+            RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/adminf.jsp");
             dispatcher.forward(request, response);
         } catch (SQLException e) {
-            throw new ServletException("Unable to retrieve appos", e);
+            throw new ServletException("Unable to retrieve feedback", e);
         }
     }
 
     public void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String pid = request.getParameter("pid");
-        String did = request.getParameter("did");
-        String date_time = request.getParameter("date_time");
-        String Report = "Not yet";
+        int id = Integer.parseInt(request.getParameter("id"));
+        String feeb = request.getParameter("feeb");
         try {
-            Report appo = new Report(pid, did, date_time, Report);
-            appoDao.addAppo(appo);
-            response.sendRedirect("/myapp/appo");
+            AdminFeed adminFeed = new AdminFeed(id, feeb);
+            adminFeedDao.addAdminFeed(adminFeed);
+            response.sendRedirect("/myapp/adminf");
         } catch (SQLException e) {
             throw new ServletException("Unable to add user", e);
         }
