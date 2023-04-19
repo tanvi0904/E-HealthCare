@@ -1,0 +1,31 @@
+<web-app>
+  <display-name>E-HealthCare Management System</display-name>
+  
+  <servlet>
+    <servlet-name>Dashboard</servlet-name>
+    <servlet-class>Dashboard</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Dashboard</servlet-name>
+    <url-pattern>/dasboard</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>UserController</servlet-name>
+    <servlet-class>UserController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserController</servlet-name>
+    <url-pattern>/users</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>LoginController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+</web-app>
