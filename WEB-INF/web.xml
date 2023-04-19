@@ -36,4 +36,13 @@
     <servlet-name>UserFeedController</servlet-name>
     <url-pattern>/userf</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PayController</servlet-name>
+    <servlet-class>PayController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PayController</servlet-name>
+    <url-pattern>/pay</url-pattern>
+  </servlet-mapping>
 </web-app>
