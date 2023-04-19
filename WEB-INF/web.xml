@@ -71,5 +71,14 @@
     <servlet-name>AdminFeedController</servlet-name>
     <url-pattern>/adminf</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>DoctorController</servlet-name>
+    <servlet-class>DoctorController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DoctorController</servlet-name>
+    <url-pattern>/doctor</url-pattern>
+  </servlet-mapping>
   
 </web-app>
