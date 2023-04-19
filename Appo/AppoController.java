@@ -24,7 +24,7 @@ public class AppoController extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         try {
-            List<Report> appos = appoDao.getAllAppos();
+            List<Appo> appos = appoDao.getAllAppos();
             request.setAttribute("appos", appos);
             RequestDispatcher dispatcher = request.getRequestDispatcher("/WEB-INF/views/appo.jsp");
             dispatcher.forward(request, response);
@@ -40,7 +40,7 @@ public class AppoController extends HttpServlet {
         String date_time = request.getParameter("date_time");
         String Report = "Not yet";
         try {
-            Report appo = new Report(pid, did, date_time, Report);
+            Appo appo = new Appo(pid, did, date_time, Report);
             appoDao.addAppo(appo);
             response.sendRedirect("/myapp/appo");
         } catch (SQLException e) {
