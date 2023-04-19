@@ -30,7 +30,7 @@
         <input type="text" name="doctorSp" placeholder="Doctor Speciality">
         <button type="submit">Add Details</button>
     </form>
-    <h2>Display Payment Details</h2>
+    <h2>Display Doctor Details</h2>
     <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
         <tr style="border: 1px solid black; border-collapse: collapse;">
             <th style="border: 1px solid black; border-collapse: collapse;">Doctor ID</th>

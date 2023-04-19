@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Payment</title>
+    <title>Admin Payment Verification</title>
     <script>
         function myDisplayFunc() {
             var table = document.getElementById("myTable");
@@ -21,19 +21,19 @@
     </script>
 </head>
 <body>
-    <h1>Payment</h1>
+    <h1>Payment Verification</h1>
 
     <form action="adminpay" method="post">
-        <h2>Add Pay Details</h2>
+        <h2>Update Verification Status</h2>
         <input type="text" name="userID" placeholder="User ID">
         <input type="text" name="paymentType" placeholder="Payment Type">
         <input type="text" name="paymentAmount" placeholder="Amount">
         <input type="text" name="paymentDate" placeholder="Date">
         <input type="text" name="transactionID" placeholder="Transaction ID">
         <input type="text" name="verify" placeholder="Status">
-        <button type="submit">Add Details</button>
+        <button type="submit">Update</button>
     </form>
-    <h2>Display Payment Details</h2>
+    <h2>Display All Payment Details</h2>
     <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
         <tr style="border: 1px solid black; border-collapse: collapse;">
             <th style="border: 1px solid black; border-collapse: collapse;">User ID</th>

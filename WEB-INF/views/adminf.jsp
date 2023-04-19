@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Blood Donation</title>
+    <title>Admin Feedback View</title>
     <script>
         function myDisplayFunc() {
             var table = document.getElementById("myTable");

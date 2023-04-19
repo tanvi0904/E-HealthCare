@@ -4,7 +4,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Blood Donation</title>
+    <title>User Feedback</title>
     <script>
         function myDisplayFunc() {
             var table = document.getElementById("myTable");
@@ -28,7 +28,7 @@
         <input type="text" name="feeb" placeholder="Feedback">
         <button type="submit">Add Details</button>
     </form>
-    <h2>Display Feedback Details</h2>
+    <!-- <h2>Display Feedback Details</h2> -->
     <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
         <tr style="border: 1px solid black; border-collapse: collapse;">
             <th style="border: 1px solid black; border-collapse: collapse;">UserID</th>
@@ -41,6 +41,6 @@
             </tr>
         </c:forEach>
     </table>
-    <button onclick="myDisplayFunc()">Get Details</button>
-    <button onclick="myDisplayHide()">Close View</button>
+    <!-- <button onclick="myDisplayFunc()">Get Details</button>
+    <button onclick="myDisplayHide()">Close View</button> -->
 </html>

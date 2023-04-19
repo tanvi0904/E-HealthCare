@@ -24,15 +24,15 @@
     <h1>Payment</h1>
 
     <form action="pay" method="post">
-        <h2>Add Pay Details</h2>
+        <h2>Make a Payment</h2>
         <input type="text" name="userID" placeholder="User ID">
         <input type="text" name="paymentType" placeholder="Payment Type">
         <input type="text" name="paymentAmount" placeholder="Amount">
         <input type="text" name="paymentDate" placeholder="Date">
         <input type="text" name="transactionID" placeholder="Transaction ID">
-        <button type="submit">Add Details</button>
+        <button type="submit">Pay</button>
     </form>
-    <h2>Display Payment Details</h2>
+    <!-- <h2>Display Payment Details</h2> -->
     <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
         <tr style="border: 1px solid black; border-collapse: collapse;">
             <th style="border: 1px solid black; border-collapse: collapse;">User ID</th>
@@ -55,8 +55,8 @@
             </tr>
         </c:forEach>
     </table>
-    <button onclick="myDisplayFunc()">Get Details</button>
-    <button onclick="myDisplayHide()">Close View</button>
+    <!-- <button onclick="myDisplayFunc()">Get Details</button>
+    <button onclick="myDisplayHide()">Close View</button> -->
 
 </body>
 </html>
