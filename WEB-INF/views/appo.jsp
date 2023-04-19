@@ -22,16 +22,16 @@
 </head>
 <!-- table has only pid and did date_time and report -->
 <body>
-    <h1>Pls Enter Feedback</h1>
+    <h1>Make an Appointment</h1>
     <form action="appo" method="post">
-        <h2>Add Feedback Details</h2>
+        <h2>Enter Details</h2>
         <input type="text" name="pid" placeholder="pid">
         <input type="text" name="did" placeholder="did">
         <input type="text" name="date_time" placeholder="date_time">
         <!-- <input type="text" name="report" placeholder="report"> -->
-        <button type="submit">Add Details</button>
+        <button type="submit">Confirm</button>
     </form>
-    <h2>Display Feedback Details</h2>
+    <h2>Display Appointment Details</h2>
     <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
         <tr style="border: 1px solid black; border-collapse: collapse;">
             <th style="border: 1px solid black; border-collapse: collapse;">pid</th>
