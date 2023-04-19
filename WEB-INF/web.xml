@@ -77,4 +77,12 @@
     <servlet-name>AdminFeedController</servlet-name>
     <url-pattern>/adminf</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>AdminPayController</servlet-name>
+    <servlet-class>AdminPayController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>AdminPayController</servlet-name>
+    <url-pattern>/adminpay</url-pattern>
+  </servlet-mapping>
 </web-app>
