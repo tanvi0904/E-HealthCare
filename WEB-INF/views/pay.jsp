@@ -20,8 +20,55 @@
         }
     </script>
     <style>
-        body{
+        body {
             background-color: #aff0fa;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -38,25 +85,25 @@
         <button type="submit">Pay</button>
     </form>
     <!-- <h2>Display Payment Details</h2> -->
-    <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
-        <tr style="border: 1px solid black; border-collapse: collapse;">
-            <th style="border: 1px solid black; border-collapse: collapse;">User ID</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Payment Type</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Amount</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Date</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Transaction ID</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Status</th>
+    <table id="myTable" style="display: none;">
+        <tr>
+            <th>User ID</th>
+            <th>Payment Type</th>
+            <th>Amount</th>
+            <th>Date</th>
+            <th>Transaction ID</th>
+            <th>Status</th>
 
 
         </tr>
         <c:forEach items="${payments}" var="pay">
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">${pay.userID}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${pay.paymentType}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${pay.paymentAmount}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${pay.paymentDate}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${pay.transactionID}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${pay.verify}</td>
+            <tr>
+                <td>${pay.userID}</td>
+                <td>${pay.paymentType}</td>
+                <td>${pay.paymentAmount}</td>
+                <td>${pay.paymentDate}</td>
+                <td>${pay.transactionID}</td>
+                <td>${pay.verify}</td>
             </tr>
         </c:forEach>
     </table>

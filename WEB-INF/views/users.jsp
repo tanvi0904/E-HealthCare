@@ -20,8 +20,55 @@
         }
     </script>
     <style>
-        body{
+        body {
             background-color: #aff0fa;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -39,21 +86,21 @@
     </form>
 
     <h2>Display All Donations and their details</h2>
-    <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
-        <tr style="border: 1px solid black; border-collapse: collapse;">
-            <th style="border: 1px solid black; border-collapse: collapse;">ID</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Name</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Age</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Blood Group</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Amount Donated</th>
+    <table id="myTable" style="display: none;">
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Blood Group</th>
+            <th>Amount Donated</th>
         </tr>
         <c:forEach items="${users}" var="user">
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">${user.id}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${user.name}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${user.age}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${user.bg}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${user.donation}</td>
+            <tr>
+                <td>${user.id}</td>
+                <td>${user.name}</td>
+                <td>${user.age}</td>
+                <td>${user.bg}</td>
+                <td>${user.donation}</td>
             </tr>
         </c:forEach>
     </table>

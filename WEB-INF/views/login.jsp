@@ -20,8 +20,55 @@
         }
     </script>
     <style>
-        body{
+        body {
             background-color: #aff0fa;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -36,18 +83,18 @@
         <button type="submit">Submit</button>
     </form>
     <!-- <h2>Display Login Details</h2> -->
-    <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
-        <tr style="border: 1px solid black; border-collapse: collapse;">
-            <th style="border: 1px solid black; border-collapse: collapse;">USN</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Password</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Role</th>
+    <table id="myTable" style="display: none;">
+        <tr>
+            <th>USN</th>
+            <th>Password</th>
+            <th>Role</th>
 
         </tr>
         <c:forEach items="${logins}" var="login">
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">${login.username}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${login.password}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${login.role}</td>
+            <tr>
+                <td>${login.username}</td>
+                <td>${login.password}</td>
+                <td>${login.role}</td>
             </tr>
         </c:forEach>
     </table>

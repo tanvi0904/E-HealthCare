@@ -20,8 +20,55 @@
         }
     </script>
     <style>
-        body{
+        body {
             background-color: #aff0fa;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -36,18 +83,18 @@
         <button type="submit">Add Details</button>
     </form>
     <h2>Display Doctor Details</h2>
-    <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
-        <tr style="border: 1px solid black; border-collapse: collapse;">
-            <th style="border: 1px solid black; border-collapse: collapse;">Doctor ID</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Doctor Name</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Doctor Speciality</th>
+    <table id="myTable" style="display: none;">
+        <tr>
+            <th>Doctor ID</th>
+            <th>Doctor Name</th>
+            <th>Doctor Speciality</th>
 
         </tr>
         <c:forEach items="${doctors}" var="doctor">
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">${doctor.doctorID}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${doctor.doctorName}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${doctor.doctorSp}</td>
+            <tr>
+                <td>${doctor.doctorID}</td>
+                <td>${doctor.doctorName}</td>
+                <td>${doctor.doctorSp}</td>
             </tr>
         </c:forEach>
     </table>

@@ -20,8 +20,55 @@
         }
     </script>
     <style>
-        body{
+        body {
             background-color: #aff0fa;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -34,15 +81,15 @@
         <button type="submit">Add Details</button>
     </form>
     <!-- <h2>Display Feedback Details</h2> -->
-    <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
-        <tr style="border: 1px solid black; border-collapse: collapse;">
-            <th style="border: 1px solid black; border-collapse: collapse;">UserID</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Feedback</th>
+    <table id="myTable" style="display: none;">
+        <tr>
+            <th>UserID</th>
+            <th>Feedback</th>
         </tr>
         <c:forEach items="${userFeeds}" var="userFeed">
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">${userFeed.id}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${userFeed.feeb}</td>
+            <tr>
+                <td>${userFeed.id}</td>
+                <td>${userFeed.feeb}</td>
             </tr>
         </c:forEach>
     </table>

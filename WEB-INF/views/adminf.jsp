@@ -5,6 +5,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Admin Feedback View</title>
+    <style>
+        body {
+            background-color: #aff0fa;
+            font-family: Arial, sans-serif;
+        }
+        table {
+            border: 1px solid #ddd;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+        button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: #3e8e41;
+        }
+    </style>
     <script>
         function myDisplayFunc() {
             var table = document.getElementById("myTable");
@@ -19,33 +55,23 @@
             }
         }
     </script>
-    <style>
-        body{
-            background-color: #aff0fa;
-        }
-    </style>
 </head>
 <body>
-    <!-- <h1>Pls Enter Feedback</h1> -->
-    <!-- <form action="adminf" method="post">
-        <h2>Add Feedback Details</h2>
-        <input type="text" name="id" placeholder="UserID">
-        <input type="text" name="feeb" placeholder="Feedback">
-        <button type="submit">Add Details</button>
-    </form> -->
+    <h1>Admin Feedback View</h1>
     <h2>Display Feedback Details</h2>
-    <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
-        <tr style="border: 1px solid black; border-collapse: collapse;">
-            <th style="border: 1px solid black; border-collapse: collapse;">UserID</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">Feedback</th>
+    <table id="myTable" style="display: none;">
+        <tr>
+            <th>User ID</th>
+            <th>Feedback</th>
         </tr>
         <c:forEach items="${adminFeeds}" var="adminFeed">
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">${adminFeed.id}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${adminFeed.feeb}</td>
+            <tr>
+                <td>${adminFeed.id}</td>
+                <td>${adminFeed.feeb}</td>
             </tr>
         </c:forEach>
     </table>
-    <button onclick="myDisplayFunc()">Get Details</button>
-    <button onclick="myDisplayHide()">Close View</button>
+    <button onclick="myDisplayFunc()">Show Feedback Details</button>
+    <button onclick="myDisplayHide()">Hide Feedback Details</button>
+</body>
 </html>

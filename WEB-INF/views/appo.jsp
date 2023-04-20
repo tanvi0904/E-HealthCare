@@ -20,8 +20,55 @@
         }
     </script>
     <style>
-        body{
+        body {
             background-color: #aff0fa;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        input[type="text"] {
+            padding: 10px;
+            margin: 5px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+        }
+        button[type="submit"] {
+            padding: 10px;
+            margin: 5px;
+            width: 150px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
+        }
+        table {
+            border: 1px solid black;
+            border-collapse: collapse;
+            margin: 20px auto;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        button {
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            font-weight: bold;
         }
     </style>
 </head>
@@ -37,19 +84,19 @@
         <button type="submit">Confirm</button>
     </form>
     <h2>Display Appointment Details</h2>
-    <table id="myTable" style="display: none; border: 1px solid black; border-collapse: collapse;">
-        <tr style="border: 1px solid black; border-collapse: collapse;">
-            <th style="border: 1px solid black; border-collapse: collapse;">pid</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">did</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">date_time</th>
-            <th style="border: 1px solid black; border-collapse: collapse;">report</th>
+    <table id="myTable" style="display: none;">
+        <tr  >
+        <th  >pid</th>
+            <th  >did</th>
+            <th  >date_time</th>
+            <th  >report</th>
         </tr>
         <c:forEach items="${appos}" var="appo">
-            <tr style="border: 1px solid black; border-collapse: collapse;">
-                <td style="border: 1px solid black; border-collapse: collapse;">${appo.pid}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${appo.did}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${appo.date_time}</td>
-                <td style="border: 1px solid black; border-collapse: collapse;">${appo.report}</td>
+            <tr  >
+                <td  >${appo.pid}</td>
+                <td  >${appo.did}</td>
+                <td  >${appo.date_time}</td>
+                <td  >${appo.report}</td>
             </tr>
         </c:forEach>
     </table>
