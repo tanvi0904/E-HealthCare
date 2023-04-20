@@ -89,4 +89,12 @@
     <servlet-name>AdminPayController</servlet-name>
     <url-pattern>/adminpay</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <servlet-name>UserDocController</servlet-name>
+    <servlet-class>UserDocController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserDocController</servlet-name>
+    <url-pattern>/userdoc</url-pattern>
+  </servlet-mapping>
 </web-app>
